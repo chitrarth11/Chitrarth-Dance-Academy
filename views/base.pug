@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Chitrarth Dance Academy
+        block scripts
+        block style 
+    body 
+        nav#navbar 
+            div#logo 
+                img(src="/static/Dance_logo.png", alt="logo")
+                | CDA
+            ul 
+                li #[a(href= "/") Home]
+                li #[a(href= "/about") About]
+                li #[a(href= "/services") Services]
+                li #[a(href= "/contact") Contact Us]
+
+        
+        block content 
+
+        block footer
+            footer 
+                | Copyright ©2025 chitrarthacademy.com | All rights reserved.

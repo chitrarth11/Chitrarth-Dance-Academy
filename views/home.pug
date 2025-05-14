@@ -1,0 +1,32 @@
+extends base.pug
+
+block scripts
+    script(src='../static/index.js')
+
+block style
+    style
+        include ../static/style.css
+
+block content    
+    section#intro 
+        h2 Welcome to the best Dance Academy in the town
+        p Eat.Sleep.Dance.Repeat
+
+    section#content 
+        h3 Our Mission and Activities
+        .card 
+            p Provide professional dance training for all age groups
+            .card_box 
+                img(src="../static/1.png")
+        .card 
+            p Promote both cultural and modern dance forms
+            .card_box 
+                img(src="../static/2.png")
+        .card 
+            p Organize annual dance competitions and showcases
+            .card_box 
+                img(src="../static/3.png")
+
+block footer
+    footer
+        | Copyright ©2025 chitrarthacademy.com | All rights reserved.

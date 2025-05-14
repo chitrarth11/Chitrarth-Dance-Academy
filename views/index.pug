@@ -1,0 +1,43 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Chitrarth Dance Academy
+        style 
+            include ../static/style.css
+    body 
+        nav#navbar 
+            div#logo 
+                img(src="/static/Dance_logo.png", alt="logo")
+                | CDA
+            ul 
+                li #[a(href= "/") Home]
+                li #[a(href= "/") About]
+                li #[a(href= "/") Services]
+                li #[a(href= "/") Contact Us]
+
+        section#intro 
+            h2 Welcome to Eesh's Dance Academy 
+            p Eat.Sleep.Dance.Repeat
+
+        section#content 
+            h3 Our Mission and Activities
+            .card 
+                p Provide professional dance training for all age groups
+                .card_box 
+                    img(src="../static/1.png")
+            .card 
+                p Promote cultural and modern dance forms
+                .card_box 
+                    img(src="../static/2.png")
+            .card 
+                p Organize annual dance competitions and showcases
+                .card_box 
+                    img(src="../static/3.png")
+
+        footer
+            | Copyright ©2025 chitrarthacademy.com | All rights reserved.
+
+    script 
+        include ../static/index.js
