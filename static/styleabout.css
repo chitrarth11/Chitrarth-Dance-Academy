@@ -1,0 +1,28 @@
+h2 {
+    text-align: center;
+    margin: 20px auto;
+    color: whitesmoke;
+    font-size: 3rem;
+}
+
+.cont { 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 45vh;
+    border-radius: 8px;
+    width:75%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.550);
+}
+
+.cont p{
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 15px 28px
+}
+
+.boldtxt{
+    font-weight: 800;
+}

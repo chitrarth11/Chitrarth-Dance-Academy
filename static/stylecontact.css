@@ -2,7 +2,34 @@ h1 {
     text-align: center;
     margin: 20px auto;
     color: whitesmoke;
-    font-size: 45px;
+    font-size: 3rem;
+}
+
+.success {
+    width: 50%;
+    margin: 0 auto 20px auto;
+    padding: 15px;
+    font-size: 1.4rem;
+    text-align: center;
+    color: rgb(0, 100, 0);
+    background-color: rgba(200, 255, 200, 0.85);
+    border: 2px solid rgb(0, 100, 0);
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.fail {
+    width: 50%;
+    box-sizing: border-box;
+    margin: 0 auto 20px auto;
+    padding: 15px;
+    font-size: 1.4rem;
+    text-align: center;
+    color: rgb(180 15 0);
+    background-color: rgb(210 100 80 / 85%);
+    border: 2px solid rgb(180 15 0);
+    border-radius: 8px;
+    font-weight: 600;
 }
 
 form {
@@ -18,7 +45,15 @@ form {
     width: 50%;
 }
 
-input, select {
+p {
+    font-weight: 800;
+    font-size: 1.7rem;
+    padding-bottom: 20px;
+}
+
+input,
+select,
+textarea {
     width: 60%;
     padding: 12px;
     margin: 10px 0;
@@ -28,20 +63,24 @@ input, select {
     outline: none;
 }
 
+textarea::placeholder {
+    color: rgba(0, 0, 0, 0.600);
+}
+
 input::placeholder {
     color: rgba(0, 0, 0, 0.850);
 }
 
-select{
+select {
     width: 63%;
     color: rgba(0, 0, 0, 0.850);
 }
 
-select option{
+select option {
     color: rgb(51, 51, 51);
 }
 
-#btn{
+#btn {
     color: whitesmoke;
     background-color: rgb(51, 51, 51);
     padding: 12px 15%;
@@ -50,4 +89,10 @@ select option{
     border: 2px solid black;
     border-radius: 8px;
     cursor: pointer;
+    transition: all 0.15s;
+}
+
+#btn:hover {
+    background-color: rgb(27, 27, 27);
+    transform: scale(.96);
 }

@@ -1,19 +1,32 @@
 extends base.pug
 
 block scripts
-    script(src='../static/index.js')
+    script.
+        if (window.location.search.includes('submitted=true')) {
+            const url = new URL(window.location);
+            url.search = '';
+            window.history.replaceState({}, document.title, url.toString());
+        }
+
 
 block style
     style
         include ../static/style.css
         include ../static/stylecontact.css
 
-block content    
-    h1 Contact Us 
-    form(action="/contact". method='post')
+block content
+    h1 Contact Us
+
+    if message1
+        p.success= message1
+    if message2
+        p.fail= message2
+
+    form(action="/contact", method="post")
+        p Feel free to reach out if you have any queries!
         input(type="text", name="name", placeholder="Name", required)
 
-        input(type="age", name="age", placeholder="Age", required)
+        input(type="number", name="age", placeholder="Age", required)
 
         select(name="gender", id='gender', required)
             option(value="none" selected) Gender
@@ -21,9 +34,11 @@ block content
             option(value="Female") Female
             option(value="Others") Others
 
-        input(type="phone", name="phone", placeholder="Number", required)
+        input(type="tel", name="phone", placeholder="Contact Number", required)
 
         input(type="email", name="email", placeholder="Email")
 
-        buttom(id="btn")
+        textarea(name="query", id="query", placeholder="Type Your Query (Max 150 Characters)")
+
+        button(id="btn")
             | Submit 
